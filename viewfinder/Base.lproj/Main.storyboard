@@ -48,7 +48,7 @@
         <!--Add New Photo-->
         <scene sceneID="gbU-qO-4FM">
             <objects>
-                <viewController id="LDl-RN-Cez" sceneMemberID="viewController">
+                <viewController id="LDl-RN-Cez" customClass="AddPhotoViewController" customModule="viewfinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZh-ai-D5Z">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,16 +57,25 @@
                                 <rect key="frame" x="381" y="463" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library "/>
+                                <connections>
+                                    <action selector="photoLibrary:" destination="LDl-RN-Cez" eventType="touchUpInside" id="8vh-C0-sOF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-P8-Pwg">
-                                <rect key="frame" x="93" y="472" width="54" height="30"/>
+                                <rect key="frame" x="93" y="474" width="54" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="camera:" destination="LDl-RN-Cez" eventType="touchUpInside" id="tz3-5P-d3n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LU-Ii-N6f">
                                 <rect key="frame" x="726" y="472" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albums:" destination="LDl-RN-Cez" eventType="touchUpInside" id="eQn-6F-QXQ"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image View" translatesAutoresizingMaskIntoConstraints="NO" id="ZPz-x9-jtu">
                                 <rect key="frame" x="297" y="147" width="240" height="128"/>
@@ -80,25 +89,32 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG0-yB-XSP">
-                                <rect key="frame" x="400" y="801" width="34" height="30"/>
+                                <rect key="frame" x="400" y="759" width="34" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="LDl-RN-Cez" eventType="touchUpInside" id="drO-CX-ZWb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hGS-kQ-JeQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="ME1-op-PdS"/>
+                    <connections>
+                        <outlet property="photoPlace" destination="ZPz-x9-jtu" id="8nC-oN-BTw"/>
+                        <outlet property="text" destination="lIM-i7-e3x" id="u0V-Cn-vUk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5A-hV-9mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869.7841726618706" y="107.53768844221105"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Add-->
         <scene sceneID="vk3-ND-J4B">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knx-vA-vgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FxL-dM-bu6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FxL-dM-bu6" customClass="Add" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hq1-Yy-hRb">
                         <rect key="frame" x="0.0" y="24" width="834" height="50"/>

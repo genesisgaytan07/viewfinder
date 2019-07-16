@@ -6,6 +6,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>viewfinder</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs access to camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>this app needs access to the photo library</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
